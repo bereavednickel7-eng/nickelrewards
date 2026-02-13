@@ -91,7 +91,7 @@ export default async function RoobetPage() {
     return (
       <main className="min-h-screen text-black p-10">
         <div className="flex items-center gap-3 mb-6">
-          <Image src="/Roobet-logo.png" alt="Roobet" width={120} height={40} />
+          <Image src="/roobet-logo.png" alt="Roobet" width={120} height={40} unoptimized />
           <h1 className="text-3xl font-bold">Roobet Leaderboard</h1>
         </div>
 
@@ -116,7 +116,7 @@ export default async function RoobetPage() {
     <main className="min-h-screen text-black p-10">
       <div className="flex items-center gap-3 mb-2">
         <a href="/clash">
-          <Image src="/Roobet-logo.png" alt="Roobet" width={120} height={40} />
+          <Image src="/roobet-logo.png" alt="Roobet" width={120} height={40} unoptimized />
         </a>
         <h1 className="text-3xl font-bold">Roobet Leaderboard</h1>
       </div>

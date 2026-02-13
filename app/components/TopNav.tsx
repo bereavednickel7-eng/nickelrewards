@@ -39,11 +39,12 @@ export default function TopNav() {
 
         <Link href="/roobet" className={linkClass("/roobet")}>
           <Image
-            src="/Roobet-logo.png"
+            src="/roobet-logo.png"
             alt="Roobet"
             width={100}
             height={32}
             priority
+            unoptimized
           />
         </Link>
       </div>
