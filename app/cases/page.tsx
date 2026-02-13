@@ -75,7 +75,7 @@ export default async function CasesPage() {
 
   if (apiError) {
     return (
-      <main className="min-h-screen bg-blue-200 text-black p-10">
+      <main className="min-h-screen text-black p-10">
         <div className="flex items-center gap-3 mb-6">
           <Image src="/cases-logo.png" alt="Cases" width={120} height={40} />
           <h1 className="text-3xl font-bold">Cases Leaderboard</h1>
@@ -118,7 +118,7 @@ export default async function CasesPage() {
   const top10 = sorted.slice(0, 15);
 
   return (
-    <main className="min-h-screen bg-rose-200 text-black p-10">
+    <main className="min-h-screen text-black p-10">
       <div className="flex items-center gap-3 mb-2">
         <Image src="/cases-logo.png" alt="Cases" width={120} height={40} />
         <h1 className="text-3xl font-bold">Cases Leaderboard</h1>

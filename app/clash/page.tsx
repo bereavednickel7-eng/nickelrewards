@@ -60,7 +60,7 @@ export default async function ClashPage() {
 
   if (!token) {
     return (
-      <main className="min-h-screen bg-blue-200 text-black p-10">
+      <main className="min-h-screen text-black p-10">
         <h1 className="text-3xl font-bold mb-4">Clash Leaderboard</h1>
         <div className="bg-white rounded-xl shadow p-4 border border-rose-300">
           <div className="font-semibold mb-2">API error</div>
@@ -105,7 +105,7 @@ export default async function ClashPage() {
 
   if (apiError) {
     return (
-      <main className="min-h-screen bg-blue-200 text-black p-10">
+      <main className="min-h-screen text-black p-10">
         <div className="flex items-center gap-3 mb-6">
           <Image src="/clash-logo.png" alt="Clash" width={120} height={40} />
           <h1 className="text-3xl font-bold">Clash Leaderboard</h1>
@@ -156,7 +156,7 @@ export default async function ClashPage() {
     top10.every((r) => r.wagered === 0);
 
   return (
-    <main className="min-h-screen bg-blue-200 text-black p-10">
+    <main className="min-h-screen text-black p-10">
       <div className="flex items-center gap-3 mb-2">
         <Image src="/clash-logo.png" alt="Clash" width={120} height={40} />
         <h1 className="text-3xl font-bold">Clash Leaderboard</h1>
@@ -170,6 +170,7 @@ export default async function ClashPage() {
             <div className="bg-white rounded-xl shadow p-4 w-56">
               <div className="text-xs uppercase text-gray-600 tracking-wide">Prize Pool</div>
               <div className="text-lg font-bold">$3,250.00</div>
+              <div className="text-xs text-gray-600 mt-1">Rewards Are Paid Instantly</div>
             </div>
 
             <div className="bg-white rounded-xl shadow p-4 w-56">
@@ -194,7 +195,11 @@ export default async function ClashPage() {
         {top10.map((u, idx) => {
           const reward = rewards[idx] ?? 0;
           return (
-            <div key={u.key} className="grid grid-cols-4 p-4 border-t border-blue-200">
+            <div
+              key={u.key}
+              className="grid grid-cols-4 p-4 border border-[#d32f2f] border-t-2 rounded-lg bg-gradient-to-r from-[#ef9a9a]/90 via-[#b71c1c]/30 to-[#b71c1c]/10 shadow"
+              style={{ boxShadow: '0 2px 12px 0 rgba(183,28,28,0.10)' }}
+            >
               <div>#{idx + 1}</div>
               <div>{maskUsername(u.username)}</div>
               <div>{formatCurrency(u.wagered)}</div>
