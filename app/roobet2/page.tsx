@@ -96,7 +96,7 @@ export default async function Roobet2Page() {
   );
 
   const top15 = sorted.slice(0, 15);
-  const rewards = [1425, 750, 375, 150, 100, 50, 50, 50, 25, 25];
+  const rewards = [500, 200, 100, 50, 50, 20, 20, 20, 20, 20];
 
   return (
     <main className="min-h-screen text-black p-10">
@@ -114,8 +114,8 @@ export default async function Roobet2Page() {
       <div className="flex gap-4 mb-8">
         <div className="bg-white rounded-xl shadow p-4 w-56">
           <div className="text-xs uppercase text-gray-600 tracking-wide">Prize Pool</div>
-          <div className="text-lg font-bold">$3,000.00</div>
-          <div className="text-xs text-gray-600 mt-1">Rewards Are Paid Instantly</div>
+          <div className="text-lg font-bold">$1,000.00</div>
+          <div className="text-xs text-gray-600 mt-1">$100 Wagered = 1 Ticket</div>
         </div>
 
         <div className="bg-white rounded-xl shadow p-4 w-56">
