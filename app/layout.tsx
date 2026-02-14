@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screen">
         {/* Top black nav */}
-        <header className="w-full bg-black">
+        <header className="w-full" style={{ background: '#24172A' }}>
           <div className="mx-auto px-4 py-3 flex items-center justify-between">
             {/* Top-left banner/logo */}
             <Link href="/clash" className="flex items-center gap-3 shrink-0">
@@ -51,6 +51,12 @@ export default function RootLayout({
                 className="px-4 py-2 rounded-md font-bold text-white hover:text-white hover:bg-white/10 transition"
               >
                 ROOBET
+              </Link>
+              <Link
+                href="/roobet2"
+                className="px-4 py-2 rounded-md font-bold text-white hover:text-white hover:bg-white/10 transition"
+              >
+                ROOBETS SPORTS
               </Link>
             </nav>
           </div>

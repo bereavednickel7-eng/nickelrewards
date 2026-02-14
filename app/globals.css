@@ -14,8 +14,8 @@
 }
 
 body {
-  /* Light red to dark red vertical gradient */
-  background: linear-gradient(to bottom, #ffebee 0%, #ef5350 50%, #b71c1c 100%);
+  /* White to banner purple vertical gradient, less white */
+  background: linear-gradient(to bottom, #fff 0%, #24172A 40%, #2d2036 100%) !important;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }

@@ -1,9 +1,10 @@
-function maskUsername(name: string) {
-    if (!name || name.length < 4) return name;
-    return name.slice(0, 2) + '***' + name.slice(-2);
-  }
 import Image from "next/image";
-import Countdown from "./Countdown";
+import Countdown from "../roobet/Countdown";
+
+function maskUsername(name: string) {
+  if (!name || name.length < 4) return name;
+  return name.slice(0, 2) + '***' + name.slice(-2);
+}
 
 const USER_ID = "8a58f75b-71f1-47e1-a2d8-00e4a61fd1c4"; // hardcoded
 
@@ -33,25 +34,11 @@ type RoobetRow = {
   weightedWagered?: number;
 };
 
-export default async function RoobetPage() {
+export default async function Roobet2Page() {
   const key = process.env.ROOBET_API_KEY;
 
-  if (!key) {
-    return (
-      <main className="min-h-screen text-black p-10">
-        <h1 className="text-3xl font-bold mb-4">Roobet Leaderboard</h1>
-        <div className="bg-white rounded-xl shadow p-4 border border-rose-300">
-          <div className="font-semibold mb-2">API error</div>
-          <pre className="text-sm whitespace-pre-wrap">
-            {JSON.stringify({ error: "Missing ROOBET_API_KEY in .env.local" }, null, 2)}
-          </pre>
-        </div>
-      </main>
-    );
-  }
-
-  const startDate = startOfMonthUTCISO();          // e.g. 2026-02-01T00:00:00.000Z
-  const endDate = startOfNextMonthUTCISO();        // e.g. 2026-03-01T00:00:00.000Z
+  const startDate = startOfMonthUTCISO();
+  const endDate = startOfNextMonthUTCISO();
 
   const url =
     `https://roobetconnect.com/affiliate/v2/stats` +
@@ -92,9 +79,8 @@ export default async function RoobetPage() {
       <main className="min-h-screen text-black p-10">
         <div className="flex items-center gap-3 mb-6">
           <Image src="/roobet-logo.png" alt="Roobet" width={120} height={40} unoptimized />
-          <h1 className="text-3xl font-bold">Roobet Leaderboard</h1>
+          <h1 className="text-3xl font-bold">Roobets Sports Leaderboard</h1>
         </div>
-
         <div className="bg-white rounded-xl shadow p-4 border border-rose-300">
           <div className="font-semibold mb-2">API error</div>
           <pre className="text-sm whitespace-pre-wrap">
@@ -118,7 +104,7 @@ export default async function RoobetPage() {
         <a href="/clash">
           <Image src="/roobet-logo.png" alt="Roobet" width={120} height={40} unoptimized />
         </a>
-        <h1 className="text-3xl font-bold">Roobet Leaderboard</h1>
+        <h1 className="text-3xl font-bold">Roobets Sports Leaderboard</h1>
       </div>
 
       <div className="text-sm text-gray-700 mb-6">

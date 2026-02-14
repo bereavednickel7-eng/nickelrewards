@@ -1,4 +1,4 @@
-  function maskUsername(name: string) {
+function maskUsername(name: string) {
     if (!name || name.length < 4) return name;
     return name.slice(0, 2) + '***' + name.slice(-2);
   }
@@ -174,6 +174,12 @@ export default async function ClashPage() {
             </div>
 
             <div className="bg-white rounded-xl shadow p-4 w-56">
+              <div className="text-xs uppercase text-gray-600 tracking-wide">Raffle</div>
+              <div className="text-lg font-bold">$1,000.00</div>
+              <div className="text-xs text-gray-600 mt-1">$100 Wagered = 1 Ticket</div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow p-4 w-56">
               <div className="text-xs uppercase text-gray-600 tracking-wide">Ends In</div>
               <div className="text-lg font-bold">
                 <Countdown endIsoUtc={timerEndIso} repeatDays={7} />
@@ -185,25 +191,28 @@ export default async function ClashPage() {
           </div>
 
       <div className="bg-white rounded-xl shadow overflow-hidden">
-        <div className="grid grid-cols-4 font-semibold border-b bg-gray-100 p-4">
+        <div className="grid grid-cols-5 font-semibold border-b bg-gray-100 p-4">
           <div>Rank</div>
           <div>User</div>
           <div>Wagered</div>
           <div>Reward</div>
+          <div>Raffle tickets</div>
         </div>
 
         {top10.map((u, idx) => {
           const reward = rewards[idx] ?? 0;
+          const tickets = Math.floor(u.wagered / 100);
           return (
             <div
               key={u.key}
-              className="grid grid-cols-4 p-4 border border-[#d32f2f] border-t-2 rounded-lg bg-gradient-to-r from-[#ef9a9a]/90 via-[#b71c1c]/30 to-[#b71c1c]/10 shadow"
+              className="grid grid-cols-5 p-4 border border-[#24172A] border-t-2 rounded-lg shadow"
               style={{ boxShadow: '0 2px 12px 0 rgba(183,28,28,0.10)' }}
             >
               <div>#{idx + 1}</div>
               <div>{maskUsername(u.username)}</div>
               <div>{formatCurrency(u.wagered)}</div>
               <div className="font-semibold">{formatCurrency(reward)}</div>
+              <div>{tickets}</div>
             </div>
           );
         })}

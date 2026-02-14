@@ -47,6 +47,10 @@ export default function TopNav() {
             unoptimized
           />
         </Link>
+
+        <Link href="/roobet2" className={linkClass("/roobet2") + " text-white text-lg font-semibold"}>
+          ROOBETS SPORTS
+        </Link>
       </div>
     </div>
   );
