@@ -145,15 +145,17 @@ export default async function ClashPage() {
 
   // Sort by wagered desc
   const sorted = [...normalized].sort((a, b) => b.wagered - a.wagered);
-  const top10 = sorted.slice(0, 15);
+  // Show all users with at least 1 ticket
+  const leaderboardRows = sorted.filter(u => Math.floor(u.wagered / 100) >= 1);
+  const totalTickets = leaderboardRows.reduce((sum, u) => sum + Math.floor(u.wagered / 100), 0);
   const rewards = [1600, 675, 325, 150, 100, 100, 50, 50, 50, 50, 20, 20, 20, 20, 20];
 
   // Show debug if things look wrong (your exact issue)
   const looksBroken =
     rowsRaw.length > 0 &&
-    top10.length > 0 &&
-    top10.every((r) => r.username === "—") &&
-    top10.every((r) => r.wagered === 0);
+    leaderboardRows.length > 0 &&
+    leaderboardRows.every((r) => r.username === "-") &&
+    leaderboardRows.every((r) => r.wagered === 0);
 
   return (
     <main className="min-h-screen text-black p-10">
@@ -175,7 +177,7 @@ export default async function ClashPage() {
 
             <div className="bg-white rounded-xl shadow p-4 w-56">
               <div className="text-xs uppercase text-gray-600 tracking-wide">Raffle</div>
-              <div className="text-lg font-bold">$1,000.00</div>
+              <div className="text-lg font-bold">$1,000 | {totalTickets} tickets</div>
               <div className="text-xs text-gray-600 mt-1">$100 Wagered = 1 Ticket</div>
             </div>
 
@@ -199,7 +201,7 @@ export default async function ClashPage() {
           <div>Raffle tickets</div>
         </div>
 
-        {top10.map((u, idx) => {
+        {leaderboardRows.slice(0, 15).map((u, idx) => {
           const reward = rewards[idx] ?? 0;
           const tickets = Math.floor(u.wagered / 100);
           return (

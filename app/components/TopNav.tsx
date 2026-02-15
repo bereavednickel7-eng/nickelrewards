@@ -17,12 +17,12 @@ export default function TopNav() {
   return (
     <div className="flex justify-center border-b border-neutral-800 bg-neutral-950">
       <div className="flex items-center gap-8 py-4">
-        <Link href="/clash" className={linkClass("/clash")}>
+        <Link href="/clash" className={linkClass("/clash")}> 
           <Image
             src="/clash-logo.png"
             alt="Clash"
-            width={100}
-            height={32}
+            width={85}
+            height={27}
             priority
           />
         </Link>
@@ -49,7 +49,7 @@ export default function TopNav() {
         </Link>
 
         <Link href="/roobet2" className={linkClass("/roobet2") + " text-white text-lg font-semibold"}>
-          ROOBETS SPORTS
+          ROOBET SPORTS
         </Link>
       </div>
     </div>

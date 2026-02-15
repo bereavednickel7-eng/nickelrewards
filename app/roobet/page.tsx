@@ -134,7 +134,7 @@ export default async function RoobetPage() {
 
         <div className="bg-white rounded-xl shadow p-4 w-56">
           <div className="text-xs uppercase text-gray-600 tracking-wide">Raffle</div>
-          <div className="text-lg font-bold">$1,000.00</div>
+          <div className="text-lg font-bold">$1,000 | {sorted.reduce((sum, u) => sum + Math.floor((u.weightedWagered ?? 0) / 100), 0)} tickets</div>
           <div className="text-xs text-gray-600 mt-1">$100 Wagered = 1 Ticket</div>
         </div>
 

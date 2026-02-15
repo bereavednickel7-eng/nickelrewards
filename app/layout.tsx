@@ -25,8 +25,8 @@ export default function RootLayout({
               <Image
                 src="/Banner-banner.png"
                 alt="NickelRewards"
-                width={400}
-                height={80}
+                width={350}
+                height={70}
                 priority
                 unoptimized
               />
@@ -56,7 +56,7 @@ export default function RootLayout({
                 href="/roobet2"
                 className="px-4 py-2 rounded-md font-bold text-white hover:text-white hover:bg-white/10 transition"
               >
-                ROOBETS SPORTS
+                ROOBET SPORTS
               </Link>
             </nav>
           </div>
