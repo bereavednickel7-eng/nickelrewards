@@ -1,0 +1,2 @@
+// Add react-icons for social icons
+// Run: npm install react-icons
