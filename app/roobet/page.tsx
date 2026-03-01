@@ -39,7 +39,7 @@ export default async function RoobetPage() {
   if (!key) {
     return (
       <main className="min-h-screen text-black p-10">
-        <h1 className="text-3xl font-bold mb-4">Roobet Leaderboard</h1>
+        <h1 className="text-3xl font-bold mb-4">Leaderboard</h1>
         <div className="bg-white rounded-xl shadow p-4 border border-rose-300">
           <div className="font-semibold mb-2">API error</div>
           <pre className="text-sm whitespace-pre-wrap">
@@ -118,11 +118,13 @@ export default async function RoobetPage() {
         <a href="/clash">
           <Image src="/roobet-logo.png" alt="Roobet" width={120} height={40} unoptimized />
         </a>
-        <h1 className="text-3xl font-bold">Roobet Leaderboard</h1>
+        <h1 className="text-3xl font-bold">Leaderboard</h1>
       </div>
 
-      <div className="text-sm text-gray-700 mb-6">
-        Ranked by <b>wagered</b> since <b>{startDate.slice(0, 10)}</b> (UTC).
+      <div className="text-sm text-gray-700 mb-6 flex items-center gap-2">
+        <span>Wager On Code Nickel</span>
+        <span>|</span>
+        <span>Ranked by <b>wagered</b> since <b>{startDate.slice(0, 10)}</b> (UTC)</span>
       </div>
 
       <div className="flex gap-4 mb-8">

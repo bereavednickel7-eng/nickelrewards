@@ -78,7 +78,7 @@ export default async function CasesPage() {
       <main className="min-h-screen text-black p-10">
         <div className="flex items-center gap-3 mb-6">
           <Image src="/cases-logo.png" alt="Cases" width={120} height={40} />
-          <h1 className="text-3xl font-bold">Cases Leaderboard</h1>
+          <h1 className="text-3xl font-bold">Leaderboard</h1>
         </div>
 
         <div className="bg-white rounded-xl shadow p-4 border border-rose-300">
@@ -121,11 +121,13 @@ export default async function CasesPage() {
     <main className="min-h-screen text-black p-10">
       <div className="flex items-center gap-3 mb-2">
         <Image src="/cases-logo.png" alt="Cases" width={120} height={40} />
-        <h1 className="text-3xl font-bold">Cases Leaderboard</h1>
+        <h1 className="text-3xl font-bold">Leaderboard</h1>
       </div>
 
-      <div className="text-sm text-gray-700 mb-6">
-        Ranked by <b>wagered</b> since <b>{sinceLabel}</b> (UTC).
+      <div className="text-sm text-gray-700 mb-6 flex items-center gap-2">
+        <span>Wager On Code Nickel</span>
+        <span>|</span>
+        <span>Ranked by <b>wagered</b> since <b>{sinceLabel}</b> (UTC).</span>
       </div>
       <div className="flex gap-4 mb-8">
         <div className="bg-white rounded-xl shadow p-4 w-56">

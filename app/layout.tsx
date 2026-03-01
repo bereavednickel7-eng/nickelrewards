@@ -24,10 +24,10 @@ export default function RootLayout({
             <div className="flex items-center gap-4 shrink-0">
               <Link href="/clash" className="flex items-center gap-3">
                 <Image
-                  src="/Banner-banner.png"
+                  src="/Banner-banner2.png"
                   alt="NickelRewards"
-                  width={220}
-                  height={50}
+                  width={198}
+                  height={45}
                   priority
                   unoptimized
                   style={{ borderRadius: '0.5rem', boxShadow: '0 2px 12px 0 rgba(0,0,0,0.10)' }}
@@ -37,7 +37,7 @@ export default function RootLayout({
               <a href="https://x.com/Bereavednickel7" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white text-2xl transition">
                 <FaXTwitter />
               </a>
-              <a href="https://kick.com/bereavednickel7" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+              <a href="https://kick.com/nick3l" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
                 <img src="/kick.png" alt="Kick" style={{ width: 21.06, height: 21.06, display: 'block' }} />
               </a>
               <a href="https://discord.gg/g3q5ekz6KC" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white text-2xl transition">

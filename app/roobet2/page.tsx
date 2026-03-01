@@ -79,7 +79,7 @@ export default async function Roobet2Page() {
       <main className="min-h-screen text-black p-10">
         <div className="flex items-center gap-3 mb-6">
           <Image src="/roobet-logo.png" alt="Roobet" width={120} height={40} unoptimized />
-          <h1 className="text-3xl font-bold">Roobet Sports Leaderboard</h1>
+          <h1 className="text-3xl font-bold">Leaderboard</h1>
         </div>
         <div className="bg-white rounded-xl shadow p-4 border border-rose-300">
           <div className="font-semibold mb-2">API error</div>
@@ -104,18 +104,20 @@ export default async function Roobet2Page() {
         <a href="/clash">
           <Image src="/roobet-logo.png" alt="Roobet" width={120} height={40} unoptimized />
         </a>
-        <h1 className="text-3xl font-bold">Roobet Sports Leaderboard</h1>
+          <h1 className="text-3xl font-bold">Leaderboard</h1>
       </div>
 
-      <div className="text-sm text-gray-700 mb-6">
-        Ranked by <b>wagered</b> since <b>{startDate.slice(0, 10)}</b> (UTC).
+      <div className="text-sm text-gray-700 mb-6 flex items-center gap-2">
+        <span>Wager On Code Nickel</span>
+        <span>|</span>
+        <span>Ranked by <b>wagered</b> since <b>{startDate.slice(0, 10)}</b> (UTC)</span>
       </div>
 
       <div className="flex gap-4 mb-8">
         <div className="bg-white rounded-xl shadow p-4 w-56">
           <div className="text-xs uppercase text-gray-600 tracking-wide">Prize Pool</div>
           <div className="text-lg font-bold">$1,000.00</div>
-          <div className="text-xs text-gray-600 mt-1">$100 Wagered = 1 Ticket</div>
+          <div className="text-xs text-gray-600 mt-1">Rewards Are Paid Instantly</div>
         </div>
 
         <div className="bg-white rounded-xl shadow p-4 w-56">

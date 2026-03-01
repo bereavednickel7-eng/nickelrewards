@@ -61,7 +61,7 @@ export default async function ClashPage() {
   if (!token) {
     return (
       <main className="min-h-screen text-black p-10">
-        <h1 className="text-3xl font-bold mb-4">Clash Leaderboard</h1>
+        <h1 className="text-3xl font-bold mb-4">Leaderboard</h1>
         <div className="bg-white rounded-xl shadow p-4 border border-rose-300">
           <div className="font-semibold mb-2">API error</div>
           <pre className="text-sm whitespace-pre-wrap">
@@ -107,7 +107,7 @@ export default async function ClashPage() {
     return (
       <main className="min-h-screen text-black p-10">
         <div className="flex items-center gap-3 mb-6">
-          <Image src="/clash-logo.png" alt="Clash" width={120} height={40} />
+          <Image src="/clash-logo5.png" alt="Clash" width={120} height={40} />
           <h1 className="text-3xl font-bold">Clash Leaderboard</h1>
         </div>
 
@@ -160,12 +160,14 @@ export default async function ClashPage() {
   return (
     <main className="min-h-screen text-black p-10">
       <div className="flex items-center gap-3 mb-2">
-        <Image src="/clash-logo.png" alt="Clash" width={120} height={40} />
-        <h1 className="text-3xl font-bold">Clash Leaderboard</h1>
+        <Image src="/clash-logo5.png" alt="Clash" width={120} height={40} />
+        <h1 className="text-3xl font-bold">Leaderboard</h1>
       </div>
 
-      <div className="text-sm text-gray-700 mb-6">
-        Ranked by <b>wagered</b> since <b>{sinceLabel}</b> (UTC).
+      <div className="text-sm text-gray-700 mb-6 flex items-center gap-2">
+        <span>Wager On Code Nickel</span>
+        <span>|</span>
+        <span>Ranked by <b>wagered</b> since <b>{sinceLabel}</b> (UTC)</span>
       </div>
 
           <div className="flex gap-4 mb-8">
